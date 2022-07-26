@@ -13,7 +13,7 @@
   }
   
   #container {
-	margin: 0px auto;
+	margin: 150px auto;
 	height: 500px;
 	width: 1000px;
 	display: flex;
@@ -21,7 +21,7 @@
   }
   
   #slideshow {
-	width: 1000px;
+	width: 850px;
   }
   
   #slideshow img {
@@ -50,7 +50,28 @@
 	margin: 20px 10px;
   }
   
+  #thumbnails {
+	position: relative;
+	width: 150px;
+	display: flex;
+	flex-direction: column;
+	background-color: #000;
+  }
+  
+  #thumbnails img {
+	height: calc(100% / 5);
+	opacity: 0.5;
+  }
+  
+  .thumbnail-active {
+	opacity: 1 !important;
+	border: 2px solid #dac9ff;
+  }
+  
   .arrow {
+	position: absolute;
+	left: 61px;
+	margin: 10px 0;
 	padding: 5px 10px;
 	background-color: #fff;
 	border-radius: 50%;
@@ -60,15 +81,16 @@
 	font-size: 15px;
 	font-weight: bold;
 	z-index: 999;
-	align-self: center;
-	position: absolute;
-	justify-self: center;
   }
   
   .arrow:hover {
 	opacity: 1;
   }
   
+  #arrow-up {
+	top: 0;
+  }
+  
   #arrow-down {
-	right: 460px;
+	bottom: 0;
   }
